@@ -108,14 +108,14 @@ Replace `path/to/config.yaml` with the actual path to your custom YAML configura
 After retraining the model with your desired parameters, you may want to run the interface with the newly trained model. Execute the command below to do so:
 
 ```
-make run MODEL_PATH=path/to/model.h5 CONFIG_PATH=path/to/the/corresponding/config.yaml
+make run MODEL_PATH=path/to/model.keras CONFIG_PATH=path/to/the/corresponding/config.yaml
 ```
 Here, `path/to/model.keras` should be replaced with the path to your trained model file, and `path/to/the/corresponding/config.yaml` with the path to the configuration file used for training this model.
 
 ## Track metrics with [Weight & Biases](https://wandb.ai/)
 
 To track advanced metrics and visualize results such as a confusion matrix, specify wandb_parameters in your configuration file. This allows integration with Weights & Biases for performance tracking and visualization.
-
+> Please note that you must also have wandb installed and be logged in before executing the `make train` command.
 Configuration snippet:
 
 ```yaml
