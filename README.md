@@ -116,13 +116,14 @@ Here, `path/to/model.keras` should be replaced with the path to your trained mod
 
 To track advanced metrics and visualize results such as a confusion matrix, specify wandb_parameters in your configuration file. This allows integration with Weights & Biases for performance tracking and visualization.
 
-Example configuration snippet:
+Configuration snippet:
 
-yaml
-Copy code
+```yaml
 wandb_parameters:
   project_name: project name
   username: username
+```
+
 After specifying these parameters, the training process will log metrics to your Weights & Biases dashboard, where you can view detailed performance charts and confusion matrices.
 
 <div align="center">
