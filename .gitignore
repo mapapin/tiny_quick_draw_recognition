@@ -1,0 +1,6 @@
+*cache*
+*venv*
+.DS_Store
+dataset
+models
+wandb
