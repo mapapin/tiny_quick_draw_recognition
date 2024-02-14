@@ -1,0 +1,92 @@
+image_size:
+  - 28
+  - 28
+
+loss_name: cross_entropy
+
+epochs: 15
+learning_rate: 0.0001
+
+wandb_parameters:
+  project_name: Tiny Quick Draw
+  username: mapapin
+
+data:
+  folder: dataset
+  generate: True
+  train_samples: 3000
+  validation_samples: 500
+  test_samples: 500
+  batch_size: 64
+  classes:
+    - airplane
+    - ant
+    - apple
+    - arm
+    - banana
+    - basket
+    - basketball
+    - bat
+    - bathtub
+    - beach
+    - bed
+    - bee
+    - bicycle
+    - bird
+    - birthday cake
+    - book
+    - bowtie
+    - bridge
+    - broom
+    - bucket
+    - bus
+    - butterfly
+    - cactus
+    - camera
+    - campfire
+    - candle
+    - car
+    - carrot
+    - cell phone
+    - chair
+    - circle
+    - clock
+    - cloud
+    - computer
+    - cookie
+    - couch
+    - crown
+    - cup
+    - diamond
+    - donut
+    - door
+    - ear
+    - envelope
+    - eye
+    - eyeglasses
+    - face
+    - fish
+    - flower
+    - guitar
+    - hamburger
+    - hand
+    - key
+    - ladder
+    - moon
+    - panda
+    - pants
+    - pear
+    - pizza
+    - sailboat
+    - skull
+    - snowflake
+    - strawberry
+    - television
+    - tooth
+    - tree
+    - triangle
+    - umbrella
+    - whale
+    - zigzag
+
+

@@ -1,0 +1,11 @@
+matplotlib
+numpy
+pygame
+tensorflow
+Pillow
+quickdraw
+tqdm
+focal-loss
+pydantic
+seaborn
+scikit-learn
