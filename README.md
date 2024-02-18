@@ -4,7 +4,7 @@
 A minimalist version of the the Google ["Quick, Draw !"](https://quickdraw.withgoogle.com/). Test your drawing skills against an AI that guesses what you are sketching !
 
 <div align="center">
-    <img src="https://private-user-images.githubusercontent.com/56489418/304731948-9fa76195-818e-451e-b2e0-809ba11aefe4.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc5MTM5MzgsIm5iZiI6MTcwNzkxMzYzOCwicGF0aCI6Ii81NjQ4OTQxOC8zMDQ3MzE5NDgtOWZhNzYxOTUtODE4ZS00NTFlLWIyZTAtODA5YmExMWFlZmU0LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjE0VDEyMjcxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc1YWIyNDEzNDRlNTQyMmRlMjAzZmI3MzNjMjc4Yjk2YzRlZTlmZjEzNWVmMmNlYzMxZjNmODU5MGIwODMwMjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.bavwKySAtNRQIsMBBKsZLBhySFT1aF18gpHymYtRwAY" width="320" height="320"/>
+    <img src="assets/tiny_quick_draw_demo.gif" width="320" height="320"/>
 </div>
 
 ## Architecture
@@ -14,7 +14,7 @@ This ResNet was trained from scratch to see where I can go.
 This model is implemented with TensorFlow and Keras.
 
 <div align="center">
-	<img src="https://private-user-images.githubusercontent.com/56489418/304732205-bb495042-72f6-4c48-b20c-ad4aac911945.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc5MTM5MzgsIm5iZiI6MTcwNzkxMzYzOCwicGF0aCI6Ii81NjQ4OTQxOC8zMDQ3MzIyMDUtYmI0OTUwNDItNzJmNi00YzQ4LWIyMGMtYWQ0YWFjOTExOTQ1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjE0VDEyMjcxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTJkZmNiYjZlZGMzNGY3ZmY1ODE0NjVhNjhmOGQ0ZDljNDY2NjEzNjU4YWMzOWZlNjNiYzgxNGZmNzE2ODU4NDUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.8wlgwXDLv4TS3RfmQ-G4F4dCV_joeqen9R8ULwb7f5c" alt="ResNet Bloc"/>
+	<img src="assets/resnet_bloc.ppm" alt="ResNet Bloc"/>
 	<figcaption><i>ResNet bloc</i></figcaption>
 </div>
 
@@ -115,7 +115,7 @@ Here, `path/to/model.keras` should be replaced with the path to your trained mod
 ## Track metrics with [Weight & Biases](https://wandb.ai/)
 
 To track advanced metrics and visualize results such as a confusion matrix, specify wandb_parameters in your configuration file. This allows integration with Weights & Biases for performance tracking and visualization.
-> Please note that you must also have wandb installed and be logged in before executing the `make train` command.
+> Please note that you must also have wandb installed and be logged in before executing the `make train` command to have access to metrics.
 Configuration snippet:
 
 ```yaml
@@ -128,7 +128,7 @@ After specifying these parameters, the training process will log metrics to your
 
 <div align="center">
     <!-- Placeholder for Metrics Curve Image -->
-    <img src="https://private-user-images.githubusercontent.com/56489418/304731746-b2115205-e5c2-4273-aca6-9468abe0870c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc5MTM5MzgsIm5iZiI6MTcwNzkxMzYzOCwicGF0aCI6Ii81NjQ4OTQxOC8zMDQ3MzE3NDYtYjIxMTUyMDUtZTVjMi00MjczLWFjYTYtOTQ2OGFiZTA4NzBjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjE0VDEyMjcxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTJmZDg2Y2E0YTQ2Njg0ZmM3NWU2MWEyMjAyZmJiNjdlNjYyMjdlNWZkZDMwYzNlZGZjY2RiZDgwY2I5NWFiZDgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.XfRkaOCmBv4_VOpltdHhv0sshLRCE7SyQkljNNR1zDc" alt="Metrics Curve" width="480" height="320"/>
+    <img src="assets/wandb_metrics.png" alt="Metrics Curve" width="480" height="320"/>
     <!-- Placeholder for Confusion Matrix Image -->
-    <img src="https://private-user-images.githubusercontent.com/56489418/304731852-592e87cc-97b2-4809-ae5b-380e2355538f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc5MTM5MzgsIm5iZiI6MTcwNzkxMzYzOCwicGF0aCI6Ii81NjQ4OTQxOC8zMDQ3MzE4NTItNTkyZTg3Y2MtOTdiMi00ODA5LWFlNWItMzgwZTIzNTU1MzhmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjE0VDEyMjcxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIzODk4MGEyMGUzZDhlZjE2ODI0M2UxNDg1ZGZiNzJmYThiZDg5NTE2MDI5ZmVmNzFmNjg5NTQzNDg1YTM1MWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.PI0-cqt0_hRYGggqmtkmfoaVRlXwHg6Nu4uZug_o-Qg" alt="Confusion Matrix" width="480" height="400"/>
+    <img src="assets/wandb_confusion_matrix.png" alt="Confusion Matrix" width="480" height="400"/>
 </div>
